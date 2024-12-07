@@ -3,31 +3,32 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #1e1e1e; /* Daha koyu bir arka plan */
+  background-color: #1e1e1e;
   color: white;
-  font-family: 'Arial', sans-serif; /* Daha modern bir font */
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
 }
 
 body {
-  overflow: hidden; /* Yatay kaydırmayı önler */
+  overflow: hidden;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Tam ekran yüksekliği */
-  scroll-snap-type: y mandatory; /* Kaydırma hizalaması */
-  overflow-y: scroll; /* Yalnızca dikey kaydırma */
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 .main-container {
-  min-height: 100vh; /* Her karakter tam ekran yüksekliğinde */
-  scroll-snap-align: start; /* Kaydırma hizalaması */
+  min-height: 100vh;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* İçerik kenar boşluğu */
+  padding: 20px;
 }
 
 .image-container {
@@ -38,14 +39,14 @@ body {
   align-items: center;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Görüntüye derinlik efekti */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
 }
 
 .img-fluid {
   width: auto;
   height: 100%;
-  object-fit: cover; /* Görüntü ekranı güzel şekilde doldurur */
+  object-fit: cover;
 }
 
 .character-info {
@@ -73,5 +74,32 @@ body {
 
   .character-info p {
     font-size: 1rem;
+  }
+}
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+
+}
+.point{
+  animation: spin 1s linear infinite;
+}
+.point1{
+  animation: spin 2s linear infinite;
+}
+.point2{
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    opacity: 0;
+  }
+  to{
+   opacity: 1;
   }
 }

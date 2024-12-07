@@ -11,7 +11,7 @@ function HangMan({ data }) {
     }, [data]);
 
     if (!data) {
-        return <div className="App">Yükleniyor...</div>;
+        return <div className="loader">Yükleniyor <span className="point">.</span> <span className="point1">.</span> <span className="point2">.</span></div>;
     }
 
     return (
@@ -33,6 +33,12 @@ function HangMan({ data }) {
                     </div>
                 </div>
             ))}
+
+            <div>
+                <button style={{position:"absolute", top: "95%", left: "95%"}}>
+                <a href="*" >⬆️</a>
+                </button>
+            </div>
         </div>
     );
 }
